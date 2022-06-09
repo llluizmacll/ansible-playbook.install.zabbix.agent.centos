@@ -19,7 +19,7 @@ Repositório dedicado para automatização do agent do zabbix, utilizando Ansibl
 Primeiro iremos clonar o repositório.
 
 ```
-$ git clone git@github.com:gersontpc/ansible-zabbix-agent.git
+$ git clone https://github.com/llluizmacll/ansible-playbook.install.zabbix.agent.centos.git
 ```
 Após clonar o repositório ajuste os parâmetros do playbook e arquivo de configuração com as informações do seu zabbix server, esses arquivos são: zabbix_agentd.conf e agent-zabbix.yml.
 
