@@ -9,7 +9,7 @@ Repositório dedicado para automatização do agent do zabbix, utilizando Ansibl
 └── roles                                   >> Estrutura do Ansible
     ├── files                               >> Arquivos/Pacotes
     │   ├── zabbix_agentd.conf
-    │   └── zabbix-api-0.5.3.tar.gz
+    │   
     └── tasks                               >> Tarefas
         ├── agent-zabbix.yml
         └── main.yml                        >> Chama as tarefas
@@ -21,7 +21,16 @@ Primeiro iremos clonar o repositório.
 ```
 $ git clone https://github.com/llluizmacll/ansible-playbook.install.zabbix.agent.centos.git
 ```
-Após clonar o repositório ajuste os parâmetros do playbook e arquivo de configuração com as informações do seu zabbix server, esses arquivos são: zabbix_agentd.conf e agent-zabbix.yml.
+Após clonar o repositório ajuste os parâmetros do arquivo playbook e arquivo de configuração com as informações do seu zabbix server, esses arquivos são: zabbix_agentd.conf e agent-zabbix.yml.
+
+Crie um grupo de hosts com o servidores que deseja instalar o agente, o arquivo fica localizado em /etc/ansible/hosts
+
+Ex de criação de grupo de host:
+
+[serverlinux]
+
+tldapp01 ansible_ssh_host=10.100.12.28 ansible_ssh_user=root
+zabbix_server_hom ansible_ssh_host=10.100.19.112 ansible_ssh_user=root
 
 ## Executando playbook
 
